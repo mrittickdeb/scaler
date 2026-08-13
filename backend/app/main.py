@@ -23,6 +23,7 @@ app.include_router(summaries.router)
 app.include_router(action_items.router)
 
 
+@app.get("/")
 @app.get("/api/health")
 def health_check():
     return {"status": "ok", "service": "EchoNotes API", "version": "1.0.0"}
